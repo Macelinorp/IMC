@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- FIM FONTES -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script defer src="./scripts/script.js"></script>
+    <title>IMC</title>
+</head>
+<body>
+    <header>
+        <h1> Calculador de IMC </h1>
+    </header>
+    <main>
+        <div class="container">
+                <img src="./assets/img/fit.png" alt="">
+                <form action="">
+                    <h3>Calculadora - IMC</h3>
+                    <div>
+                        <p>Peso em kg</p>
+                        <input id="peso" type="number" placeholder="Digite o seu peso, EX: 65" >
+                    </div>
+                    <div>
+                        <p>Altura em metros</p>
+                        <input id="altura" type="number" placeholder="Digite a sua altura EX: 1.65">
+                    </div>
+                    <button id="calc-btn">Calcular</button>
+                    <div class="imc-calc-container">
+                        <div class="imc-span-result">
+                            <span class="span-result"></span>
+                            <p>Seu IMC</p>
+                        </div>
+                        <p class="imc-message"></p>
+                    </div>
+                </form>
+        </div>
+    </main>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

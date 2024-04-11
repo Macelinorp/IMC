@@ -1,0 +1,234 @@
+/*
+320px — 480px: dispositivos móveis
+481px — 768px: iPads, tablets
+769px — 1024px: telas pequenas, laptops
+1025px — 1200px: desktops, telas grandes
+1201px e acima —  telas muito grandes, TVs
+*/
+:root {
+    --main-bg-color: #201F25;
+    --secundary-bg-color: #2F2F31;
+    --green-color: #1F9D4D;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #FFF;
+    background-color: var(--green-color);
+    border-bottom: 1px solid #DDD;
+}
+main{
+    height: 100vh;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+}
+.container img{
+    width: 20%;
+}
+
+/*formulario*/
+form {
+    width: 30%;
+    color: #FFF;
+    background-color: var(--secundary-bg-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+form h3{
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+form div{
+    width: 100%;
+    padding: 0.5rem;
+}
+
+form div input{
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+
+form  button{
+    background-color: var(--green-color);
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 8px;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.imc-calc-container {
+    border-top: 1px solid #ccc;
+    box-shadow: 0px 5px 10px #cccccc46;
+    padding: 0.5rem 0.75rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.imc-span-result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.imc-span-result p{
+    font-weight: 100;
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+.imc-message {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+
+
+
+/* 320px — 480px: dispositivos móveis */
+
+@media (max-width: 319px){
+
+    header{
+        font-size: 0.7rem;
+    }
+    .container img {
+        display: none;
+    }
+    .container {
+        width: 100%;
+    }
+
+    form{
+        width: 100%;
+        overflow: hidden;
+    }
+    .imc-span-result{
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .imc-span-result{
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .container img {
+        display: none;
+    }
+    .container {
+        width: 100%;
+    }
+
+    form{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    form h3{
+        text-align: center;
+    }
+
+    form div input{
+        font-size: 1.5rem;
+    }
+
+    form  button{
+        font-size: 1.5rem;
+    }
+
+    .imc-calc-container {
+       justify-content: center;
+       align-items: center;
+        gap: 0.75rem;
+    }
+    .imc-span-result{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imc-span-result p{
+        font-size: 1.2rem;
+    }
+    
+    .imc-span-result{
+        font-size: 1.5rem;
+    }
+}
+
+
+/* 481px — 768px: iPads, tablets */
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .container img {
+        display: none;
+    }
+    .container {
+        width: 100%;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    form h3{
+        text-align: center;
+    }
+
+    form div input{
+        font-size: 1.2rem;
+    }
+
+    .imc-calc-container {
+        justify-content: center;
+        align-items: center;
+     }
+     .imc-span-result{
+         justify-content: center;
+         align-items: center;
+     }
+ 
+     .imc-span-result p{
+         font-size: 1.2rem;
+     }
+     
+     .imc-span-result{
+         font-size: 1.5rem;
+     }
+}    
